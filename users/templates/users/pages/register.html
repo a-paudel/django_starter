@@ -1,0 +1,22 @@
+{% extends 'users/layouts/guest.html' %}
+
+{% block main %}
+    <div class="prose">
+        <h1 class="text-center">
+            Register
+        </h1>
+    </div>
+    {# djlint:off #}
+    <div class="divider"></div>
+    {# djlint:on #}
+
+    <form action="{% url 'users:register' %}" method="post">
+        {% csrf_token %}
+
+        {{ form.as_div }}
+
+        <button type="submit" class="btn btn-primary w-full">
+            Register
+        </button>
+    </form>
+{% endblock main %}

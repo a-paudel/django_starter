@@ -2,6 +2,7 @@ from django import forms
 from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
 
 from core.forms import BaseForm
+from users.models import User
 
 
 class LoginForm(BaseForm, AuthenticationForm):
@@ -9,4 +10,6 @@ class LoginForm(BaseForm, AuthenticationForm):
 
 
 class RegisterForm(BaseForm, UserCreationForm):
-    pass
+    class Meta:
+        model = User
+        fields = ["username", "password1", "password2"]
