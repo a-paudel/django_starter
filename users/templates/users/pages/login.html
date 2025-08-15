@@ -1,0 +1,13 @@
+{% extends 'users/layouts/guest.html' %}
+
+{% block main %}
+    <h1>Login</h1>
+
+    <form action="{% url 'users:login' %}" method="post">
+        {% csrf_token %}
+
+        {{form.as_div}}
+
+        <button type="submit">Login</button>
+    </form>
+{% endblock main %}
