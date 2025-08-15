@@ -1,10 +1,12 @@
 from django import forms
 from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
 
+from core.forms import BaseForm
 
-class LoginForm(AuthenticationForm):
+
+class LoginForm(BaseForm, AuthenticationForm):
     pass
 
 
-class RegisterForm(UserCreationForm):
+class RegisterForm(BaseForm, UserCreationForm):
     pass
