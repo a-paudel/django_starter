@@ -18,5 +18,11 @@
         <button type="submit" class="btn btn-primary w-full">
             Login
         </button>
+
+        <div class="prose max-w-none">
+            <p>
+                Don't have an account? <a href="{% url 'users:register' %}">Register</a>
+            </p>
+        </div>
     </form>
 {% endblock main %}
