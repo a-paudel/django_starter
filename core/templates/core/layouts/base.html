@@ -6,7 +6,13 @@
     <title>{% block title %}
         Document Title
     {% endblock title %}</title>
+
+{% load django_vite %}
+{% vite_hmr_client %}
+{% vite_asset '__assets__/js/main.ts' %}
 </head>
+
+
 <body>
     {% block body %}
         
