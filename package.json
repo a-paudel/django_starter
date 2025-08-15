@@ -8,7 +8,13 @@
     "build": "vite build"
   },
   "devDependencies": {
+    "@iconify-json/lucide": "^1.2.62",
+    "@iconify/tailwind4": "^1.0.6",
+    "@tailwindcss/typography": "^0.5.16",
+    "@tailwindcss/vite": "^4.1.12",
     "@types/bun": "latest",
+    "daisyui": "^5.0.50",
+    "tailwindcss": "^4.1.12",
     "vite": "^7.1.2"
   },
   "peerDependencies": {
