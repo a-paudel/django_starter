@@ -1,9 +1,14 @@
 {% extends 'core/layouts/base.html' %}
 
 {% block body %}
-<main>
-    {% block main %}
-        
-    {% endblock main %}
-</main>
+    <div class="min-h-screen flex flex-col items-center justify-center">
+        <div class="card bg-base-200 shadow-lg w-md max-w-screen">
+            <div class="card-body">
+                <main>
+                    {% block main %}
+                    {% endblock main %}
+                </main>
+            </div>
+        </div>
+    </div>
 {% endblock body %}

@@ -1,13 +1,22 @@
 {% extends 'users/layouts/guest.html' %}
 
 {% block main %}
-    <h1>Login</h1>
+    <div class="prose">
+        <h1 class="text-center">
+            Login
+        </h1>
+    </div>
+    {# djlint:off #}
+    <div class="divider"></div>
+    {# djlint:on #}
 
     <form action="{% url 'users:login' %}" method="post">
         {% csrf_token %}
 
-        {{form.as_div}}
+        {{ form.as_div }}
 
-        <button type="submit">Login</button>
+        <button type="submit" class="btn btn-primary w-full">
+            Login
+        </button>
     </form>
 {% endblock main %}
