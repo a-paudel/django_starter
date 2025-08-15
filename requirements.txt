@@ -23,8 +23,13 @@ django==5.2.5 \
     --hash=sha256:0745b25681b129a77aae3d4f6549b62d3913d74407831abaa0d9021a03954bae \
     --hash=sha256:2b2ada0ee8a5ff743a40e2b9820d1f8e24c11bac9ae6469cd548f0057ea6ddcd
     # via
+    #   django-debug-toolbar
     #   django-starter
     #   django-vite
+django-debug-toolbar==6.0.0 \
+    --hash=sha256:0cf2cac5c307b77d6e143c914e5c6592df53ffe34642d93929e5ef095ae56841 \
+    --hash=sha256:6eb9fa6f4a5884bf04004700ffb5a44043f1fff38784447fc52c1633448c8c14
+    # via django-starter
 django-vite==3.1.0 \
     --hash=sha256:4e46572bd6b1ce70784be129205dc2ffcbc7a3c19fea50bebfb72b327bbde5fc \
     --hash=sha256:8b4ffe4a9fa81ff568bfb195e74dde8694aaf13fd4b656ae60bf59cce08b85e8
@@ -108,7 +113,9 @@ six==1.17.0 \
 sqlparse==0.5.3 \
     --hash=sha256:09f67787f56a0b16ecdbde1bfc7f5d9c3371ca683cfeaa8e6ff60b4807ec9272 \
     --hash=sha256:cf2196ed3418f3ba5de6af7e82c694a9fbdbfecccdfc72e281548517081f16ca
-    # via django
+    # via
+    #   django
+    #   django-debug-toolbar
 tqdm==4.67.1 \
     --hash=sha256:26445eca388f82e72884e0d580d5464cd801a3ea01e63e5601bdff9ba6a48de2 \
     --hash=sha256:f8aef9c52c08c13a65f30ea34f4e5aac3fd1a34959879d7e59e63027286627f2
