@@ -1,0 +1,18 @@
+<div class="flex gap-4 items-center mt-4">
+    <div class="flex-1">
+        Showing {{ page.start_index }} - {{ page.end_index }} of {{ page.paginator.count }} {{ object_name }}
+    </div>
+    {% if page.has_other_pages %}
+        <div class="join">
+            {% for link in links %}
+                {% if link.link %}
+                    <a href="{{ link.link }}"
+                       class="join-item btn
+                              {% if link.active %}btn-active{% endif %}">{{ link.label }}</a>
+                {% else %}
+                    <span class="join-item btn btn-ghost pointer-events-none">{{ link.label }}</span>
+                {% endif %}
+            {% endfor %}
+        </div>
+    {% endif %}
+</div>
