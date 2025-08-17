@@ -2,7 +2,7 @@ from django import forms
 from django.template.loader import render_to_string
 
 
-class BaseForm(forms.BaseForm):
+class BaseForm(forms.Form):
     def as_div(self):
         html = render_to_string("core/components/forms/as_div.html", {"form": self})
         return html
