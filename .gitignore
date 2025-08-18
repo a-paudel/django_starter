@@ -205,4 +205,4 @@ __marimo__/
 node_modules/
 __staticfiles__/
 __mediafiles__/
-
+db.sqlite3*
