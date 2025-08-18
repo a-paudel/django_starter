@@ -52,6 +52,9 @@ editorconfig==0.17.1 \
     # via
     #   cssbeautifier
     #   jsbeautifier
+huey==2.5.3 \
+    --hash=sha256:089fc72b97fd26a513f15b09925c56fad6abe4a699a1f0e902170b37e85163c7
+    # via django-starter
 jsbeautifier==1.15.4 \
     --hash=sha256:5bb18d9efb9331d825735fbc5360ee8f1aac5e52780042803943aa7f854f7592 \
     --hash=sha256:72f65de312a3f10900d7685557f84cb61a9733c50dcc27271a39f5b0051bf528

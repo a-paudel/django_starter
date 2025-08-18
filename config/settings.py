@@ -16,6 +16,8 @@ import dj_database_url
 from django.conf import settings
 import dotenv
 
+from background_tasks.huey import DjangoOrmHuey
+
 dotenv.load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -47,6 +49,8 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "django_vite",
     "debug_toolbar",
+    "huey.contrib.djhuey",
+    "background_tasks",
     "core",
     "users",
 ]
@@ -152,3 +156,6 @@ DJANGO_VITE = {
 DEBUG_TOOLBAR_CONFIG = {
     "SHOW_TOOLBAR_CALLBACK": lambda req: settings.DEBUG,
 }
+
+
+HUEY = DjangoOrmHuey(utc=True)

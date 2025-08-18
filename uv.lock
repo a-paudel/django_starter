@@ -94,6 +94,7 @@ dependencies = [
     { name = "django" },
     { name = "django-debug-toolbar" },
     { name = "django-vite" },
+    { name = "huey" },
     { name = "python-dotenv" },
     { name = "waitress" },
 ]
@@ -109,6 +110,7 @@ requires-dist = [
     { name = "django", specifier = ">=5.2.5" },
     { name = "django-debug-toolbar", specifier = ">=6.0.0" },
     { name = "django-vite", specifier = ">=3.1.0" },
+    { name = "huey", specifier = ">=2.5.3" },
     { name = "python-dotenv", specifier = ">=1.1.1" },
     { name = "waitress", specifier = ">=3.0.2" },
 ]
@@ -160,6 +162,12 @@ sdist = { url = "https://files.pythonhosted.org/packages/88/3a/a61d9a1f319a186b0
 wheels = [
     { url = "https://files.pythonhosted.org/packages/96/fd/a40c621ff207f3ce8e484aa0fc8ba4eb6e3ecf52e15b42ba764b457a9550/editorconfig-0.17.1-py3-none-any.whl", hash = "sha256:1eda9c2c0db8c16dbd50111b710572a5e6de934e39772de1959d41f64fc17c82", size = 16360, upload-time = "2025-06-09T08:21:35.654Z" },
 ]
+
+[[package]]
+name = "huey"
+version = "2.5.3"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/86/8c/2dfecf3705f5e522097b4e9fb6fb38e627a0340f8362cc05bd7a845e4279/huey-2.5.3.tar.gz", hash = "sha256:089fc72b97fd26a513f15b09925c56fad6abe4a699a1f0e902170b37e85163c7", size = 836918, upload-time = "2025-03-19T14:46:51.614Z" }
 
 [[package]]
 name = "jsbeautifier"
