@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     "background_tasks",
     "core",
     "users",
+    "demoapp",
 ]
 
 MIDDLEWARE = [
