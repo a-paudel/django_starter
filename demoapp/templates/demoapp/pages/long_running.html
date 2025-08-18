@@ -1,0 +1,49 @@
+{% extends 'demoapp/layouts/base.html' %}
+
+{% block main %}
+    <div class="prose">
+        <h1>Long Running</h1>
+    </div>
+
+    {# Create form #}
+    <form action="{% url 'demoapp:long_running' %}"
+          method="post"
+          class="bg-base-200 p-4 mt-10">
+        {% csrf_token %}
+        {{ form.as_div }}
+        <button type="submit" class="btn btn-primary">Create</button>
+    </form>
+
+    {# result table #}
+    <div class="prose mt-10">
+        <h2>Latest models</h2>
+    </div>
+
+    <div class="overflow-x-auto bg-base-200">
+        <table class="table">
+            <thead class="bg-base-300">
+                <tr>
+                    <th>ID</th>
+                    <th>Requested On</th>
+                    <th>Created On</th>
+                    <th>Data</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for object in object_list %}
+                    <tr>
+                        <td>{{ object.id }}</td>
+                        <td>{{ object.requested_on|date:"c" }}</td>
+                        <td>{{ object.created_on|date:"c" }}</td>
+                        <td>{{ object.data }}</td>
+                    </tr>
+
+                {% empty %}
+                    <tr>
+                        <td colspan="100" class="text-center">No models created yet</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock main %}
