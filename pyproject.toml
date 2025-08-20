@@ -10,6 +10,8 @@ dependencies = [
     "django-debug-toolbar>=6.0.0",
     "django-vite>=3.1.0",
     "huey>=2.5.3",
+    "minio>=7.2.16",
+    "psycopg[binary]>=3.2.9",
     "python-dotenv>=1.1.1",
     "waitress>=3.0.2",
 ]
